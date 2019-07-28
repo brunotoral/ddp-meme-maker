@@ -1,0 +1,13 @@
+  <%= form_for meme do |f| %>
+
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+
+    <%= f.label :top_text %>
+    <%= f.text_field :top_text, placeholder: "Your top text here", maxlength: 15, size:"15" %>
+
+    <%= f.label :bottom_text %>
+    <%= f.text_field :bottom_text, placeholder: "Your bottom text here", maxlength: 15, size:"15" %>
+
+    <%= f.submit "Save a puppy" %>
+  <% end %>

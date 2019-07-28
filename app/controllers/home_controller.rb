@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def root
-    render html: "New Home Page"
+    @meme = Meme.new
+    @last_meme = Meme.last
   end
 end
