@@ -9,7 +9,7 @@ class Meme < ApplicationRecord
       combine_options: {
         draw: "text 0,-100 '#{top_text}' text 0,100 '#{bottom_text}'",
         fill: '#FFFF00',
-        pointsize: '22',
+        pointsize: '20',
         gravity: 'center',
         font: 'helvetic',
         weight: 'heavy',
