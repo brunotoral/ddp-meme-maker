@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ddp</title>
+    <title>Don't Die Puppies | Meme Maker</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <%= render 'header' %>
+    <% if flash %>
+      <% flash.each do |k,v| %>
+        <div>
+          <%= v %>
+        </div>
+      <% end %>
+    <% end %>
     <%= yield %>
+    <%= render 'footer' %>
   </body>
 </html>

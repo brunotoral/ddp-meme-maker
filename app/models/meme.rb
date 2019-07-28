@@ -1,7 +1,8 @@
 class Meme < ApplicationRecord
   has_one_attached :image
 
-  validates :image, :top_text, :bottom_text, presence: true
+  validates :image, presence: true
+  validates  :top_text, :bottom_text, presence: true, length: { maximum: 15 }
 
   def process_image
     image.variant(
@@ -11,7 +12,6 @@ class Meme < ApplicationRecord
         fill: '#FFFF00',
         pointsize: '20',
         gravity: 'center',
-        font: 'helvetic',
         weight: 'heavy',
         stroke: 'black',
         strokewidth: '1'

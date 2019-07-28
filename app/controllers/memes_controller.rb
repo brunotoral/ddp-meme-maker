@@ -1,4 +1,4 @@
-class MemeController < ApplicationController
+class MemesController < ApplicationController
   def show
     @meme ||= Meme.find params[:id]
   end
@@ -7,18 +7,22 @@ class MemeController < ApplicationController
     @meme = Meme.new meme_params
     if @meme.save
       flash[:success] = "A puppy was saved"
+      redirect_to @meme
     else
-      #some error msg and action
+      flash[:alert] = "A puppy died!!!"
+      redirect_to root_url
     end
-  end
-
-  def edit
-    @meme = Meme.new
   end
 
   def update
     @meme ||= Meme.find params[:id]
-    @meme.update_attributes meme_params
+    if @meme.update_attributes meme_params
+      flash[:success] = "Your meme has updated"
+      redirect_to @meme
+    else
+      flash[:alert] = "You will die"
+      render :show
+    end
   end
 
   private
