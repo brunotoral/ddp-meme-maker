@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
-  def root
+  def index
     @meme = Meme.new
-    @last_meme = Meme.last
   end
 end

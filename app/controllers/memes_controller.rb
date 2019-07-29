@@ -1,6 +1,6 @@
 class MemesController < ApplicationController
   def show
-    @meme ||= Meme.find params[:id]
+    @meme = Meme.find params[:id]
   end
 
   def create
@@ -10,7 +10,7 @@ class MemesController < ApplicationController
       redirect_to @meme
     else
       flash[:alert] = "A puppy died!!!"
-      redirect_to root_url
+      render :show
     end
   end
 
@@ -28,6 +28,6 @@ class MemesController < ApplicationController
   private
 
   def meme_params
-    params.require(:meme).permit(:image, :top_text, :bottom_text)
+    params.require(:meme).permit(:image, :top_text, :bottom_text, :color)
   end
 end
