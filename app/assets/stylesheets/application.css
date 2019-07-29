@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+@import 'bulma/bulma';
+
+.meme {
+  margin: 50px;
+  margin-left: 250px;
+}
+
+.footer {
+  margin-top: 50px;
+}

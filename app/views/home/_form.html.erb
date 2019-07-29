@@ -1,13 +1,51 @@
-  <%= form_for meme do |f| %>
-
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-
-    <%= f.label :top_text %>
-    <%= f.text_field :top_text, placeholder: "Your top text here", maxlength: 15, size:"15" %>
-
-    <%= f.label :bottom_text %>
-    <%= f.text_field :bottom_text, placeholder: "Your bottom text here", maxlength: 15, size:"15" %>
-
-    <%= f.submit "Save a puppy" %>
+<%= form_for meme do |f| %>
+  <% if meme.errors.any? %>
+    <article class="message is-danger">
+      <div class="message-header">
+        <p>Danger</p>
+      </div>
+      <div class="message-body">
+        <% meme.errors.full_messages.each do |msg| %>
+          <p><%= msg %></p>
+        <% end %>
+      </div>
+    </article>
   <% end %>
+  <div class="field">
+    <%= f.label :image, class: 'label' %>
+    <div class="control">
+      <%= f.file_field :image, class: 'button' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :top_text, class: 'label' %>
+    <div class="control" >
+      <%= f.text_field :top_text, placeholder: "Your top text here", maxlength: 20, class: 'input is-primary' %>
+    </div>
+  </div>
+  <p class="help">15 is the maximum number of characters.</p>
+
+  <div class="field">
+    <%= f.label :bottom_text, class: 'label' %>
+    <div class="control">
+      <%= f.text_field :bottom_text, placeholder: "Your bottom text here", maxlength: 20, class: 'input is-primary' %>
+    </div>
+  </div>
+  <p class="help">15 is the maximum number of characters.</p>
+
+  <div class="field">
+    <div class="control">
+      <div class="select is-primary">
+        <%= f.select :color, options_for_select(Meme.colors.keys) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="field is-grouped is-grouped-right">
+      <%= f.submit "Save a puppy", class: 'button is-primary' %>
+    </div>
+  </div>
+<% end %>
+

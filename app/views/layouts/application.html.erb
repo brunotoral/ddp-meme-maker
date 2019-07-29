@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <div class="container is-fluid">
     <%= render 'header' %>
     <% if flash %>
       <% flash.each do |k,v| %>
@@ -18,7 +19,20 @@
         </div>
       <% end %>
     <% end %>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Don't Die Puppies
+          </h1>
+          <h2 class="subtitle">
+            Welcome to Don't Die puppies the meme maker.
+          </h2>
+        </div>
+      </div>
+    </section>
     <%= yield %>
     <%= render 'footer' %>
+  </div>
   </body>
 </html>
