@@ -3,6 +3,9 @@
 This app was created to create a simple Memes when you need it. Just using one image and two simple strings.
 This is the first in a series of many applications.
 
+See the example:
+https://ddp-mememaker.herokuapp.com/
+
 ###Ruby version
 `ruby-2.6.3`
 
