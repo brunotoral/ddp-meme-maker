@@ -1,10 +1,17 @@
 class Meme < ApplicationRecord
-  has_one_attached :image
+  enum color: {
+    white: "#FFFFFF",
+    red: "#FF0000",
+    yellow: "#FFFF00",
+    green: "#006400",
+    blue: "#0000CD"
+  }
 
+  has_one_attached :image
 
   validate :image_presence
   validate :color
-  enum color: {white: "#FFFFFF", red: "#FF0000", yellow: "#FFFF00", green: "#006400", blue: "#0000CD"}
+
   validates  :top_text, :bottom_text, presence: true, length: { maximum: 20 }
 
   def process_image
