@@ -1,7 +1,7 @@
 <% if meme.image.attached? %>
   <%= image_tag meme.process_image, class: 'meme' %>
   <div class="level-right">
-  <a href="<%= Rails.application.routes.url_helpers.rails_representation_path(meme.process_image.processed, only_path: true) %>" download class="button is-primary">
+  <a href="<%= rails_representation_path(meme.process_image.processed, only_path: true) %>" download class="button is-primary">
     Download
 </a>
 </div>
