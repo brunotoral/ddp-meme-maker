@@ -1,25 +1,28 @@
 # Don't Die Puppies - Meme Maker
 
 This app was created to create a simple Memes when you need it. Just using one image and two simple strings.
+This is the first in a series of many applications.
 
-
-Things you may want to cover:
-
-* Ruby version
+###Ruby version
 `ruby-2.6.3`
 
-* System dependencies
+###Rails Version
+`Rails 5.2.3`
 
-* Configuration
+###System dependencies
+To install all dependecies:
+```
+gem install bundler
+```
 
-* Database creation
+###Database creation
+The database is `Postgresql`, to setuo just run:
+```
+bin/rails db:setup
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###How to run the test suite
+To run the test suite just:
+```
+rspec
+```
