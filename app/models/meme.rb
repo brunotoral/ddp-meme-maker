@@ -16,11 +16,11 @@ class Meme < ApplicationRecord
 
   def process_image
     image.variant(
-      resize: '304x221',
+      resize: '403x294',
       combine_options: {
         draw: "text 0,-100 '#{top_text}' text 0,100 '#{bottom_text}'",
         fill: color,
-        pointsize: '20',
+        pointsize: '18',
         gravity: 'center',
         weight: 'heavy',
         stroke: 'black',
