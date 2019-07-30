@@ -13,15 +13,15 @@ https://ddp-mememaker.herokuapp.com/
 `Rails 5.2.3`
 
 ## Bulma
-To instal bulma:
+To install bulma:
 ```
-npm install bulma
+npm install
 ```
 
 ### System dependencies
 To install all dependecies:
 ```
-gem install bundler
+bundle install
 ```
 
 ### Database creation
