@@ -9,6 +9,12 @@ This is the first in a series of many applications.
 ###Rails Version
 `Rails 5.2.3`
 
+##Bulma
+To instal bulma:
+```
+npm install bulma
+```
+
 ###System dependencies
 To install all dependecies:
 ```
