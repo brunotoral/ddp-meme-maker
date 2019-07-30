@@ -6,31 +6,31 @@ This is the first in a series of many applications.
 See the example:
 https://ddp-mememaker.herokuapp.com/
 
-###Ruby version
+### Ruby version
 `ruby-2.6.3`
 
-###Rails Version
+### Rails Version
 `Rails 5.2.3`
 
-##Bulma
+## Bulma
 To instal bulma:
 ```
 npm install bulma
 ```
 
-###System dependencies
+### System dependencies
 To install all dependecies:
 ```
 gem install bundler
 ```
 
-###Database creation
+### Database creation
 The database is `Postgresql`, to setuo just run:
 ```
 bin/rails db:setup
 ```
 
-###How to run the test suite
+### How to run the test suite
 To run the test suite just:
 ```
 rspec
